@@ -17,11 +17,7 @@ import {
 } from 'react-native';
 
 import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
+  Colors
 } from 'react-native/Libraries/NewAppScreen';
 
 const App: () => React$Node = () => {
@@ -32,39 +28,35 @@ const App: () => React$Node = () => {
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
-          <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
-            </View>
-          )}
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
-            <LearnMoreLinks />
+          <View style={styles.head}>
+              <Text style={styles.headTitle}>React Native @ BigPanda Meetup</Text>
+          </View>
+          <View style={{height: 100, backgroundColor: 'blue'}}>
+              <Text style={styles.sectionTitle}>Welcome</Text>
+          </View>
+          <View style={{height: 100, backgroundColor: 'green'}}>
+              <Text style={styles.sectionTitle}>To</Text>
+          </View>
+          <View style={{height: 100, backgroundColor: 'yellow'}}>
+              <Text style={styles.sectionTitle}>Our</Text>
+          </View>
+          <View style={{height: 100, backgroundColor: 'orange'}}>
+              <Text style={styles.sectionTitle}>Meetup</Text>
+          </View>
+          <View style={{height: 100, backgroundColor: 'darkviolet'}}>
+              <Text style={styles.sectionTitle}>Let's</Text>
+          </View>
+          <View style={{height: 100, backgroundColor: 'violet'}}>
+              <Text style={styles.sectionTitle}>Get</Text>
+          </View>
+          <View style={{height: 100, backgroundColor: 'brown'}}>
+              <Text style={styles.sectionTitle}>This</Text>
+          </View>
+          <View style={{height: 100, backgroundColor: 'red'}}>
+              <Text style={styles.sectionTitle}>Party</Text>
+          </View>
+          <View style={{height: 100, backgroundColor: 'black'}}>
+              <Text style={styles.sectionTitle}>Started</Text>
           </View>
         </ScrollView>
       </SafeAreaView>
@@ -74,41 +66,37 @@ const App: () => React$Node = () => {
 
 const styles = StyleSheet.create({
   scrollView: {
-    backgroundColor: Colors.lighter,
-  },
-  engine: {
-    position: 'absolute',
-    right: 0,
+    backgroundColor: Colors.lighter
   },
   body: {
-    backgroundColor: Colors.white,
+    backgroundColor: Colors.white
   },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
+  headTitle: {
+    alignSelf: 'center',
     fontSize: 24,
     fontWeight: '600',
     color: Colors.black,
+    marginBottom: 50,
+    marginTop: 50
   },
-  sectionDescription: {
-    marginTop: 8,
+  sectionTitle: {
+    alignSelf: 'center',
     fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
     fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
+    color: Colors.white
   },
+  blueBg:{
+    backgroundColor: 'blue'
+  },
+  yellowBg:{
+    backgroundColor: 'yellow'
+  },
+  greenBg:{
+    backgroundColor: 'green'
+  },
+  orangeBg:{
+    backgroundColor: Colors.orange
+  }
 });
 
 export default App;
