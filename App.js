@@ -20,7 +20,13 @@ import {
   Colors
 } from 'react-native/Libraries/NewAppScreen';
 
+import {
+  responsiveHeight,
+  responsiveFontSize
+} from "react-native-responsive-dimensions";
+
 const App: () => React$Node = () => {
+  const barHeight = responsiveHeight(33);
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -31,31 +37,31 @@ const App: () => React$Node = () => {
           <View style={styles.head}>
               <Text style={styles.headTitle}>React Native @ BigPanda Meetup</Text>
           </View>
-          <View style={{height: 100, backgroundColor: 'blue'}}>
+          <View style={{height: barHeight, backgroundColor: 'blue'}}>
               <Text style={styles.sectionTitle}>Welcome</Text>
           </View>
-          <View style={{height: 100, backgroundColor: 'green'}}>
+          <View style={{height: barHeight, backgroundColor: 'green'}}>
               <Text style={styles.sectionTitle}>To</Text>
           </View>
-          <View style={{height: 100, backgroundColor: 'yellow'}}>
+          <View style={{height: barHeight, backgroundColor: 'yellow'}}>
               <Text style={styles.sectionTitle}>Our</Text>
           </View>
-          <View style={{height: 100, backgroundColor: 'orange'}}>
+          <View style={{height: barHeight, backgroundColor: 'orange'}}>
               <Text style={styles.sectionTitle}>Meetup</Text>
           </View>
-          <View style={{height: 100, backgroundColor: 'darkviolet'}}>
+          <View style={{height: barHeight, backgroundColor: 'darkviolet'}}>
               <Text style={styles.sectionTitle}>Let's</Text>
           </View>
-          <View style={{height: 100, backgroundColor: 'violet'}}>
+          <View style={{height: barHeight, backgroundColor: 'violet'}}>
               <Text style={styles.sectionTitle}>Get</Text>
           </View>
-          <View style={{height: 100, backgroundColor: 'brown'}}>
+          <View style={{height: barHeight, backgroundColor: 'brown'}}>
               <Text style={styles.sectionTitle}>This</Text>
           </View>
-          <View style={{height: 100, backgroundColor: 'red'}}>
+          <View style={{height: barHeight, backgroundColor: 'red'}}>
               <Text style={styles.sectionTitle}>Party</Text>
           </View>
-          <View style={{height: 100, backgroundColor: 'black'}}>
+          <View style={{height: barHeight, backgroundColor: 'black'}}>
               <Text style={styles.sectionTitle}>Started</Text>
           </View>
         </ScrollView>
@@ -81,7 +87,7 @@ const styles = StyleSheet.create({
   },
   sectionTitle: {
     alignSelf: 'center',
-    fontSize: 18,
+    fontSize: responsiveFontSize(3),
     fontWeight: '600',
     color: Colors.white
   },
